@@ -11,10 +11,12 @@
     <body>
         <h1>Blog Name</h1>
         <div class='posts'>
-            <div class='post'>
-                <h2 class='title'>Title_1</h2>
-                <p class='body'> This_is_a_sumple_body</p>
-            </div>
+            @foreach($posts as $post)
+                <div class='post'>
+                    <h2 class='title'>{{ $post->title}}</h2>
+                    <p class='body'> {{ $post->body}}</p>
+                </div>
+            @endforeach
         </div>
     </body>
 </html>
